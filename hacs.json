@@ -1,0 +1,6 @@
+{
+  "name": "Daily Quote",
+  "content_in_root": true,
+  "filename": "daily-quote-card.js",
+  "render_readme": true
+}
