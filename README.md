@@ -12,7 +12,7 @@ In the card setup you can set:
 ## Install with HACS
 
 1. HACS → three-dot menu → **Custom repositories**.
-2. Paste `https://github.com/rwunderlichsr/daily-quote-card`. Category: **Lovelace**.
+2. Paste `https://github.com/rwunderlichsr/daily-quote-card`. Category: **Dashboard**.
 3. Download **Daily Quote**, then reload the browser.
 4. Add a card:
 
