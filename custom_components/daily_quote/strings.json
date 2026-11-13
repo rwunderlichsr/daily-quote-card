@@ -1,0 +1,42 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Daily Quote",
+        "description": "Adds a Daily Quote page to the sidebar. It is not a dashboard.",
+        "data": {
+          "pool": "Quotes",
+          "font_size": "Font size",
+          "font_style": "Font style",
+          "text_align": "Alignment",
+          "measure": "Line length",
+          "spacing": "Spacing",
+          "use_theme": "Match your theme",
+          "background_color": "Background color",
+          "font_color": "Font color"
+        }
+      }
+    },
+    "abort": {
+      "single_instance_allowed": "Daily Quote is already set up."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Daily Quote",
+        "data": {
+          "pool": "Quotes",
+          "font_size": "Font size",
+          "font_style": "Font style",
+          "text_align": "Alignment",
+          "measure": "Line length",
+          "spacing": "Spacing",
+          "use_theme": "Match your theme",
+          "background_color": "Background color",
+          "font_color": "Font color"
+        }
+      }
+    }
+  }
+}

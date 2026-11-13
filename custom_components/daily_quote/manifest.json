@@ -1,0 +1,11 @@
+{
+  "domain": "daily_quote",
+  "name": "Daily Quote",
+  "codeowners": ["@rwunderlichsr"],
+  "config_flow": true,
+  "dependencies": ["frontend"],
+  "documentation": "https://github.com/rwunderlichsr/daily-quote-card",
+  "integration_type": "service",
+  "iot_class": "calculated",
+  "version": "2.0.0"
+}

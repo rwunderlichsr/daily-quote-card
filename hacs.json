@@ -1,6 +1,5 @@
 {
   "name": "Daily Quote",
-  "content_in_root": true,
-  "filename": "daily-quote-card.js",
+  "homeassistant": "2025.1.0",
   "render_readme": true
 }
