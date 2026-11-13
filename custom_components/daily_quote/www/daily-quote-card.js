@@ -383,13 +383,22 @@ class DailyQuoteCard extends HTMLElement {
     this._built = true;
     this.shadowRoot.innerHTML = `
       <style>
-        :host { display: block; }
-        ha-card {
+        :host {
           display: block;
-          background: var(--dq-bg, var(--ha-card-background, var(--card-background-color, transparent)));
-          color: var(--dq-ink, var(--primary-text-color, inherit));
-          border-radius: var(--ha-card-border-radius, 18px);
-          overflow: hidden;
+          box-sizing: border-box;
+          width: 100%;
+          min-height: 100%;
+          height: 100%;
+          background: var(--primary-background-color, #f4f0e8);
+          color: var(--primary-text-color, #1c1915);
+        }
+        .sheet {
+          display: block;
+          box-sizing: border-box;
+          width: 100%;
+          min-height: 100%;
+          background: var(--dq-bg, transparent);
+          color: var(--dq-ink, inherit);
         }
         .wrap { padding: var(--dq-pad, 32px 28px 24px); }
         .kicker, .actions, .work { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
@@ -450,7 +459,7 @@ class DailyQuoteCard extends HTMLElement {
         button[aria-pressed="true"] { background: color-mix(in srgb, currentColor 12%, transparent); }
         .empty { margin: 0; font-size: 16px; line-height: 1.4; }
       </style>
-      <ha-card>
+      <div class="sheet">
         <div class="wrap">
           <div class="top"><p class="kicker"></p></div>
           <div class="stack">
@@ -466,7 +475,7 @@ class DailyQuoteCard extends HTMLElement {
             <button type="button" id="saved">Saved</button>
           </div>
         </div>
-      </ha-card>`;
+      </div>`;
     this.shadowRoot.getElementById("another").addEventListener("click", () => this._skip());
     this.shadowRoot.getElementById("save").addEventListener("click", () => this._toggleSave());
     this.shadowRoot.getElementById("saved").addEventListener("click", () => this._showSaved());
@@ -483,7 +492,7 @@ class DailyQuoteCard extends HTMLElement {
     const config = this._config;
     const style = STYLES[oneOf(config.font_style, Object.keys(STYLES), "serif")];
     const align = oneOf(config.text_align, ["left", "center"], "left");
-    const card = this.shadowRoot.querySelector("ha-card");
+    const card = this.shadowRoot.querySelector(".sheet");
     card.style.setProperty("--dq-size", `${safeSize(config.font_size)}px`);
     card.style.setProperty("--dq-family", style.family);
     card.style.setProperty("--dq-style", style.style);

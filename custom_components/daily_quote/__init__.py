@@ -53,8 +53,8 @@ async def _async_register_panel(hass: HomeAssistant, entry: ConfigEntry) -> None
         webcomponent_name="daily-quote-card",
         sidebar_title="Daily Quote",
         sidebar_icon="mdi:format-quote-close",
-        module_url="/daily_quote/daily-quote-card.js?v=2",
+        module_url="/daily_quote/daily-quote-card.js?v=3",
         config=options,
         require_admin=False,
-        embed_iframe=True,
+        embed_iframe=False,
     )
